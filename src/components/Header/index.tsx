@@ -121,7 +121,7 @@ export default function Header() {
         {/* Background blur (initially hidden) */}
         <div
           ref={bgRef}
-          className="absolute inset-0 bg-[#231F20] backdrop-blur-md pointer-events-none"
+          className="absolute inset-0 bg-[#CEB58D] backdrop-blur-md pointer-events-none"
         />
 
         {/* Top bar */}

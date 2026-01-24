@@ -16,12 +16,11 @@ export default function Advantage() {
     if (!sectionRef.current || !imageRef.current || !contentRef.current) return;
 
     const ctx = gsap.context(() => {
-      // IMAGE PARALLAX
       gsap.fromTo(
         imageRef.current,
-        { y: "-10%" },
+        { y: "-3%" },
         {
-          y: "10%",
+          y: "3%",
           ease: "none",
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -96,7 +95,7 @@ export default function Advantage() {
       {/* ---------------- Content ---------------- */}
       <div
         ref={contentRef}
-        className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 pt-[22vh] text-center text-white md:pt-[18vh]"
+        className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 pt-[22vh] text-center text-white md:pt-[28vh]"
       >
         <span className="mb-4 tracking-normal text-sm font-bold text-[#d1b06b]">
           THE ORIGEN ADVANTAGE

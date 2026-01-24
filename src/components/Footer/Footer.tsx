@@ -147,7 +147,7 @@ export default function Footer() {
 
       <div className="bg-[#d6c29f] text-[#1c1819] text-xs py-4">
         <div className="px-6 sm:px-10 lg:px-24 w-full flex flex-col sm:flex-row justify-between gap-2">
-          <span>Built Around Life</span>
+          <span>Design to Belong</span>
           <span>© 2026 Origen Realty | All Rights Reserved</span>
           <span>Curated by: GTF Technologies</span>
         </div>

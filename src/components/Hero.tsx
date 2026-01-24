@@ -142,7 +142,7 @@ export default function Hero() {
           will-change-transform
         "
             >
-              Built Around Life
+              Design to Belong
             </motion.h1>
 
             {/* Description */}

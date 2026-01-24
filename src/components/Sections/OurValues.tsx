@@ -186,11 +186,11 @@ export default function OurValues() {
             <span className="hidden h-px flex-1 bg-[#d8c29d] sm:block" />
 
             <div className="relative h-40 w-40 sm:h-20 sm:w-40 lg:h-28 lg:w-56">
-              <Image
+             <Image
                 src="/shake2.png"
                 alt="Handshake divider"
                 fill
-                sizes="700px"
+                sizes="(max-width: 768px) 180px, 280px"
                 className="object-contain"
                 priority
               />

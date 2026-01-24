@@ -114,7 +114,7 @@ export default function Footer() {
             className="absolute inset-0 bg-center bg-contain  "
             style={{
               backgroundRepeat: "no-repeat",
-              backgroundImage: "url('/bg/about-bg.png')",
+              backgroundImage: "url('/bg/about-bg.webp')",
             }}
           />
 

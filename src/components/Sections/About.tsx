@@ -87,45 +87,45 @@ const About = () => {
       /* =======================
        MOBILE (IMAGE ONLY)
     ======================== */
-     if (isMobile) {
-  // Image reveal
-  gsap.fromTo(
-    imageWrapRef.current,
-    {
-      clipPath: "inset(100% 0% 0% 0%)",
-      scale: 1.05,
-    },
-    {
-      clipPath: "inset(0% 0% 0% 0%)",
-      scale: 1,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: imageWrapRef.current,
-        start: "top 85%",
-        end: "top 20%",
-        scrub: true,
-      },
-    }
-  );
+      if (isMobile) {
+        // Image reveal
+        gsap.fromTo(
+          imageWrapRef.current,
+          {
+            clipPath: "inset(100% 0% 0% 0%)",
+            scale: 1.05,
+          },
+          {
+            clipPath: "inset(0% 0% 0% 0%)",
+            scale: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: imageWrapRef.current,
+              start: "top 85%",
+              end: "top 20%",
+              scrub: true,
+            },
+          },
+        );
 
-  // Overlay text (slightly delayed)
-  gsap.fromTo(
-    overlayTextRef.current,
-    {
-      opacity: 0,
-      y: 24,
-    },
-    {
-      opacity: 1,
-      y: 0,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: imageWrapRef.current,
-        start: "top 45%",
-      },
-    }
-  );
-}
+        // Overlay text (slightly delayed)
+        gsap.fromTo(
+          overlayTextRef.current,
+          {
+            opacity: 0,
+            y: 24,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: imageWrapRef.current,
+              start: "top 45%",
+            },
+          },
+        );
+      }
     }, sectionRef);
 
     return () => ctx.revert();
@@ -152,7 +152,7 @@ const About = () => {
           z-10
         "
       >
-        <span className="text-[#CEB58D] text-sm font-bold">WHO WE ARE</span>
+        <span className="text-[#F1D8A8]text-sm font-bold">WHO WE ARE</span>
 
         <h2 className="text-[#231F20] text-[clamp(2rem,4vw,2.5rem)] font-serif mb-4">
           About Us
@@ -204,10 +204,10 @@ const About = () => {
           </div>
 
           <Image
-            src="/bg/about-img.png"
+            src="/bg/about-img.webp"
             alt="About"
             fill
-            priority
+            sizes="100vw"
             className="object-cover"
           />
         </div>

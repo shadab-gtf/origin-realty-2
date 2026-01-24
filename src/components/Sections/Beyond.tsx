@@ -96,7 +96,7 @@ export default function Beyond() {
       className="relative overflow-hidden bg-[#f7f4ef] py-28 md:py-36"
     >
       <div className="relative z-10  px-6 text-center">
-        <span className="mb-4 inline-block text-sm font-bold text-[#CEB58D]">
+        <span className="mb-4 inline-block text-sm tracking-normal font-bold text-[#7b6b51]">
           BEYOND BRAND ASSOCIATIONS
         </span>
 

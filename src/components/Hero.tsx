@@ -57,8 +57,9 @@ export default function Hero() {
   return (
     <section ref={heroRef} className="relative h-svh w-full overflow-hidden">
       {/* video background  */}
-      <video
+       <video
         ref={videoRef}
+        aria-hidden="true"
         className="
           absolute inset-0
           w-full h-full
@@ -71,7 +72,6 @@ export default function Hero() {
         loop
         playsInline
       />
-
       {/* overlay  */}
       <div
         className="

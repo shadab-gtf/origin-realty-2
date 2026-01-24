@@ -284,7 +284,7 @@ export default function LiveParallaxBackground() {
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/bg/live.png')" }}
+        style={{ backgroundImage: "url('/bg/live.webp')" }}
       />
       <div className="absolute inset-0 bg-black/35" />
       <h1
@@ -310,7 +310,7 @@ export default function LiveParallaxBackground() {
       <div className="absolute inset-0 z-[9] blur-2xl opacity-30 bg-black scale-75 translate-y-20 rounded-full" />
       <img
         ref={imageRef}
-        src="/girl11.png"
+        src="/girl11.webp"
         alt="Foreground"
         className="absolute -bottom-8 left-1/2 z-10 w-[420px] max-w-[92vw] -translate-x-1/2 object-bottom transform-gpu"
         draggable={false}

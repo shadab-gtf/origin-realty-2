@@ -143,6 +143,7 @@ export default function Header() {
               sizes="(max-width: 768px) 140px, 180px"
               className="object-contain h-10 w-auto"
               priority
+              fetchPriority="high"
             />
           </Link>
 
@@ -220,9 +221,7 @@ export default function Header() {
         />
 
         {/* Nav */}
-        <AnimatePresence mode="wait">
-          {isActive && <Nav />}
-        </AnimatePresence>
+        <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
       </header>
     </>
   );

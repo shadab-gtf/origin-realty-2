@@ -147,7 +147,7 @@ export default function Purpose() {
       <div
         ref={bgRef}
         className="absolute inset-0 bg-cover bg-center will-change-transform"
-        style={{ backgroundImage: "url('/bg/vision2.png')" }}
+        style={{ backgroundImage: "url('/bg/vision2.webp')" }}
       />
 
       <div

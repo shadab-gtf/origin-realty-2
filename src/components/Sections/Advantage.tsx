@@ -87,7 +87,7 @@ export default function Advantage() {
         ref={imageRef}
         className="absolute inset-0 scale-110 will-change-transform"
         style={{
-          backgroundImage: "url('/bg/dwarka.png')",
+          backgroundImage: "url('/bg/dwarka.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

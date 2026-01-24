@@ -1,8 +1,9 @@
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Stat from "../UI/Stat";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,75 +13,74 @@ export default function Advantage() {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
-  if (!sectionRef.current || !imageRef.current || !contentRef.current) return;
+    if (!sectionRef.current || !imageRef.current || !contentRef.current) return;
 
-  const ctx = gsap.context(() => {
-    // IMAGE PARALLAX
-    gsap.fromTo(
-      imageRef.current,
-      { y: "-10%" },
-      {
-        y: "10%",
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 2,
+    const ctx = gsap.context(() => {
+      // IMAGE PARALLAX
+      gsap.fromTo(
+        imageRef.current,
+        { y: "-10%" },
+        {
+          y: "10%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 2,
+          },
         },
-      }
-    );
+      );
 
-  const items = contentRef.current
-  ? Array.from(contentRef.current.children)
-  : [];
+      const items = contentRef.current
+        ? Array.from(contentRef.current.children)
+        : [];
 
-    gsap.fromTo(
-      items,
-      {
-        opacity: 0,
-        y: 40,
-        filter: "blur(8px)",
-      },
-      {
-        opacity: 1,
-        y: 0,
-        filter: "blur(0px)",
-        duration: 1.6,
-        ease: "power3.out",
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top center",
+      gsap.fromTo(
+        items,
+        {
+          opacity: 0,
+          y: 20,
+          filter: "blur(8px)",
         },
-      }
-    );
-
-    // CONTENT MICRO PARALLAX (LUXURY)
-    gsap.fromTo(
-      contentRef.current,
-      { y: 40 },
-      {
-        y: -40,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1.5,
+        {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 1.6,
+          ease: "power3.out",
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top center",
+          },
         },
-      }
-    );
-  }, sectionRef);
+      );
 
-  return () => ctx.revert();
-}, []);
+      // CONTENT MICRO PARALLAX (LUXURY)
+      gsap.fromTo(
+        contentRef.current,
+        { y: 4 },
+        {
+          y: -40,
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1.5,
+          },
+        },
+      );
+    }, sectionRef);
 
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section
       ref={sectionRef}
-      className="relative h-[160vh] w-full overflow-hidden bg-[#050b1a]"
+      className="relative h-[160vh] w-full overflow-hidden "
     >
       {/* ---------------- Background Image ---------------- */}
       <div
@@ -115,22 +115,13 @@ export default function Advantage() {
 
         {/* ---------------- Stats ---------------- */}
         <div className=" w-full max-w-[1082px] flex md:flex-row flex-col gap-5 md:gap-0   justify-between  ">
-          <Stat value="30 Years" label="Business Acumen" />
-          <Stat value="500+ Projects" label="Combined Experience" />
-          <Stat value="2 Generations" label="Business Excellence" />
+          <Stat value="30 Years" label="Business Acumen"  index={0}/>
+          <Stat value="500+ Projects" label="Combined Experience"  index={1}/>
+          <Stat value="2 Generations" label="Business Excellence"  index={2}/>
         </div>
       </div>
     </section>
   );
 }
 
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="text-center">
-      <div className="font-serif  text-3xl md:text-[33.14px]">{value}</div>
-      <div className="mt-2 text-base md:text-[18.94px] tracking-[0.5%] text-white">
-        {label}
-      </div>
-    </div>
-  );
-}
+

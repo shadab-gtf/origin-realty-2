@@ -252,13 +252,13 @@ export default function LiveParallaxBackground() {
         defaults: { ease: "power3.out" },
         scrollTrigger: {
           trigger: wrapper,
-          start: "top+=1 top",
-          end: "+=360",
+          start: "top top",
+          end: () => "+=" + window.innerHeight * 1.2,
           scrub: 1.4,
           pin: true,
-          pinSpacing: false,
+          pinSpacing: true,
           anticipatePin: 1,
-          fastScrollEnd: true,
+          fastScrollEnd: false,
           invalidateOnRefresh: true,
         },
       });
@@ -280,7 +280,7 @@ export default function LiveParallaxBackground() {
   return (
     <section
       ref={wrapperRef}
-      className="relative h-[110vh] live-section w-full overflow-hidden bg-black perspective-[2000px]"
+      className="relative h-screen live-section w-full overflow-hidden bg-black perspective-[2000px]"
     >
       <div
         className="absolute inset-0 bg-cover bg-center"

@@ -14,7 +14,7 @@ export default function Purpose() {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
 
-  useEffect(() => {
+ useEffect(() => {
   if (
     !sectionRef.current ||
     !bgRef.current ||
@@ -25,52 +25,63 @@ export default function Purpose() {
     return;
 
   const ctx = gsap.context(() => {
-    let bgY = 0;
-    let overlayY = 0;
-    let contentY = 0;
+    /* ===============================
+       DEEP LUXURY PARALLAX LAYERS
+    =============================== */
 
-    ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top bottom",
-      end: "bottom top",
-      scrub: false,
-      onUpdate: (self) => {
-        const velocity = self.getVelocity();
+    // Background — deepest & slowest
+    gsap.fromTo(
+      bgRef.current,
+      { y: -80, scale: 1.15 },
+      {
+        y: 80,
+        scale: 1.05,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.2, // smooth cinematic scrub
+        },
+      }
+    );
 
-        // BACKGROUND (deepest layer)
-        bgY += velocity * 0.0004;
-        bgY = gsap.utils.clamp(-140, 140, bgY);
+    // Overlay — soft glass / mist
+    gsap.fromTo(
+      overlayRef.current,
+      { y: -40 },
+      {
+        y: 40,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5,
+        },
+      }
+    );
 
-        // OVERLAY (slower, softer)
-        overlayY += velocity * 0.00018;
-        overlayY = gsap.utils.clamp(-70, 70, overlayY);
+    // Content — almost static (luxury rule)
+    gsap.fromTo(
+      [headingRef.current, textRef.current],
+      { y: 20 },
+      {
+        y: -20,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 2,
+        },
+      }
+    );
 
-        // CONTENT (almost static – luxury)
-        contentY += velocity * 0.00008;
-        contentY = gsap.utils.clamp(-25, 25, contentY);
+    /* ===============================
+       TEXT REVEALS (ELEGANT)
+    =============================== */
 
-        gsap.to(bgRef.current, {
-          y: bgY,
-          scale: 1.1,
-          duration: 0.9,
-          ease: "power3.out",
-        });
-
-        gsap.to(overlayRef.current, {
-          y: overlayY,
-          duration: 0.9,
-          ease: "power3.out",
-        });
-
-        gsap.to([headingRef.current, textRef.current], {
-          y: contentY,
-          duration: 0.9,
-          ease: "power3.out",
-        });
-      },
-    });
-
-    /* TEXT REVEALS (keep elegant & slow) */
     gsap.fromTo(
       headingRef.current,
       { y: "120%" },
@@ -87,7 +98,7 @@ export default function Purpose() {
 
     gsap.fromTo(
       textRef.current,
-      { opacity: 0, y: 24 },
+      { opacity: 0, y: 30 },
       {
         opacity: 1,
         y: 0,
@@ -100,25 +111,23 @@ export default function Purpose() {
       }
     );
 
-    /* MICRO OPACITY BREATHING */
-    ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top center",
-      end: "bottom top",
-      scrub: true,
-      onUpdate: (self) => {
-        gsap.to(textRef.current, {
-          opacity: gsap.utils.interpolate(0.88, 1, self.progress),
-          duration: 0.2,
-          ease: "none",
-        });
+    /* ===============================
+       MICRO OPACITY BREATHING
+    =============================== */
+
+    gsap.to(textRef.current, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top center",
+        end: "bottom top",
+        scrub: true,
       },
     });
   }, sectionRef);
 
   return () => ctx.revert();
 }, []);
-
 
   return (
     <section

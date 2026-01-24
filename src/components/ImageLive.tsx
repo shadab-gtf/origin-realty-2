@@ -24,7 +24,6 @@
 //       willChange: 'transform',
 //     })
 
-   
 //     gsap.to(img, {
 //       rotateX: -14,
 //       rotateY: 4,
@@ -39,7 +38,6 @@
 //       },
 //     })
 
-    
 //     gsap.to(img, {
 //       y: '-=6',
 //       rotateY: '+=6',
@@ -140,7 +138,7 @@
 
 //       {/* Back Text */}
 //       <h1 className="absolute inset-0 z-0 flex items-center justify-center text-center text-[clamp(6rem,18vw,13rem)] font-light leading-none text-white select-none pointer-events-none">
-//         Design to Beyond <br /> 
+//         Design to Beyond <br />
 //       </h1>
 
 //       {/* Depth Shadow */}
@@ -161,6 +159,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,7 +174,9 @@ export default function LiveParallaxBackground() {
     const text = textRef.current;
     if (!wrapper || !img || !text) return;
 
-    const designed = text.querySelector('[data-word="designed"]') as HTMLElement;
+    const designed = text.querySelector(
+      '[data-word="designed"]',
+    ) as HTMLElement;
     const to = text.querySelector('[data-word="to"]') as HTMLElement;
     const belong = text.querySelector('[data-word="belong"]') as HTMLElement;
 
@@ -308,18 +309,25 @@ export default function LiveParallaxBackground() {
         </span>
       </h1>
       <div className="absolute inset-0 z-[9] blur-2xl opacity-30 bg-black scale-75 translate-y-20 rounded-full" />
-      <img
+      <Image
         ref={imageRef}
         src="/girl11.webp"
         alt="Foreground"
-        className="absolute -bottom-8 left-1/2 z-10 w-[420px] max-w-[92vw] -translate-x-1/2 object-bottom transform-gpu"
+        width={420}
+        height={720}
+        className="
+    absolute -bottom-8 left-1/2 z-10
+    max-w-[92vw]
+    -translate-x-1/2
+    object-bottom
+    transform-gpu
+  "
         draggable={false}
-        loading="lazy"
+        priority
       />
     </section>
   );
 }
-
 
 // 'use client'
 

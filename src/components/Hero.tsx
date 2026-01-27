@@ -103,7 +103,7 @@ export default function Hero() {
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               className="
           block
-          mb-4
+          mb-3
           text-sm 
           font-bold
           uppercase

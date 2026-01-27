@@ -138,10 +138,10 @@ export default function Beyond() {
                   relative h-12 w-28 md:h-20 md:w-32
                   opacity-80 hover:opacity-100
                   transition-all duration-500 ease-out
-                  filter invert grayscale
-                  hover:invert-0 hover:grayscale-0
-                "
-              >
+                  "
+                // filter invert grayscale
+                // hover:invert-0 hover:grayscale-0
+                  >
                 <Image src={logo} alt="" fill className="object-contain" />
               </motion.div>
             ))}

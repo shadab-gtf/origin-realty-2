@@ -311,7 +311,7 @@ export default function LiveParallaxBackground() {
       <div className="absolute inset-0 z-[9] blur-2xl opacity-30 bg-black scale-75 translate-y-20 rounded-full" />
       <Image
         ref={imageRef}
-        src="/girl11.webp"
+        src="/girl11.png"
         alt="Foreground"
         width={420}
         height={720}

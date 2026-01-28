@@ -40,9 +40,12 @@
     font-family: var(--font-ivy), Georgia, serif;
   }
 }
+.live-text{
 
+  font-family: var(--font-ivy), Georgia, serif ;
+}
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-ivy), Georgia, serif;
+  font-family: var(--font-ivy), Georgia, serif ;
 }
 .prespective-\[1200px\] {
   perspective: 1200px;

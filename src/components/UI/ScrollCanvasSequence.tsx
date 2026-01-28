@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const DESKTOP_FRAMES = 488;
 const MOBILE_FRAMES = 488;
-const START_FRAME = 4;
+const START_FRAME = 10;
 export default function ScrollCanvasSequence() {
   const sectionRef = useRef<HTMLElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -28,7 +28,7 @@ export default function ScrollCanvasSequence() {
     const ctx = context;
 
     const images: HTMLImageElement[] = [];
-    const frame = { value: 0 };
+     const frame = { value: START_FRAME };
     let lastFrame = -1;
 
     /* ---------------- RESIZE ---------------- */

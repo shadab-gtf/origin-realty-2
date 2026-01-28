@@ -152,19 +152,19 @@ const About = () => {
           z-10
         "
       >
-        <span className="text-[#F1D8A8]text-sm font-bold">WHO WE ARE</span>
+        <span className="text-[#f4c97a] text-sm font-bold">WHO WE ARE</span>
 
         <h2 className="text-[#231F20] text-[clamp(2rem,4vw,2.5rem)] font-serif mb-4">
           About Us
         </h2>
 
         <p className="text-base md:text-xl text-[#231F20] font-light">
-          We are here to reimagine what it means to build around people. To
-          shift the focus from structures to stories, from spaces to souls, from
-          profit to purpose. For us, you are not the end user. You are the
-          starting point. Every choice we make begins with one question: Will
-          this make your life and your family's life better, healthier, and more
-          meaningful?
+          Origen Realty embodies the art of thoughtful living, crafting
+          residences where wellbeing becomes intuitive and beautifully
+          effortless. Guided by visionary design and an unwavering dedication to
+          excellence, we shape spaces that elevate the everyday into the
+          exceptional, inspiring a sense of pride and belonging across every
+          community we create.
         </p>
 
         <p className="mt-8 italic text-base text-[#231F20B2]">

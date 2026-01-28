@@ -97,14 +97,14 @@ export default function Beyond() {
     >
       <div className="relative z-10  px-6 text-center">
         <span className="mb-4 inline-block text-sm tracking-normal font-bold text-[#7b6b51]">
-          BEYOND BRAND ASSOCIATIONS
+         Trusted by Iconic Brands
         </span>
 
         <h2
           ref={titleRef}
-          className="mx-auto max-w-4xl text-[clamp(2rem,4vw,2.1rem)] font-serif leading-tight text-[#231F20]"
+          className="mx-auto max-w-4xl text-[clamp(2rem,4vw,2.1rem)] font-serif capitalize leading-tight text-[#231F20]"
         >
-          Designing Experiences, Not Just Spaces
+         Partnering with India’s most respected names
         </h2>
 
         <p

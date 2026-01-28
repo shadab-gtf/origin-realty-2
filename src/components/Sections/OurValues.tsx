@@ -25,7 +25,6 @@ export default function OurValues() {
       (ctx) => {
         const { isDesktop, isTablet } = ctx.conditions as any;
 
-        
         if (isDesktop) {
           const tl = gsap.timeline({
             scrollTrigger: {
@@ -89,7 +88,6 @@ export default function OurValues() {
           });
         }
 
-      
         if (!isDesktop) {
           if (!contentRef.current) return;
 
@@ -171,11 +169,13 @@ export default function OurValues() {
 
           {/* Description */}
           <p className="lux-text values-desc mx-auto mt-6 max-w-3xl text-[clamp(0.875rem,3.5vw,1.125rem)] leading-relaxed text-[#231F20]">
-            We are creating a name synonymous with futuristic design and
-            grounded research. With a commitment to transparency and a zero-debt
-            approach, we prioritize customer attunement and sustainable growth.
-            Our values are the foundation of every structure we build, ensuring
-            that we deliver on our vision of creating a shift in the market.
+            We put our customers at the heart of every decision, building
+            meaningful connections through trust, transparency, and consistent
+            action. Guided by deep expertise, we focus on delivering lasting
+            value that goes beyond outcomes to create real impact. We embrace
+            innovation and adaptive thinking to grow in a constantly evolving
+            market. Together, these values define who we are and how we show up
+            every day.
           </p>
 
           {/* Divider */}
@@ -186,7 +186,7 @@ export default function OurValues() {
             <span className="hidden h-px flex-1 bg-[#d8c29d] sm:block" />
 
             <div className="relative h-40 w-40 sm:h-20 sm:w-40 lg:h-28 lg:w-56">
-             <Image
+              <Image
                 src="/shake2.png"
                 alt="Handshake divider"
                 fill

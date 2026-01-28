@@ -14,6 +14,7 @@ import Integrity from "@/components/Sections/Integrity";
 import OurValues from "@/components/Sections/OurValues";
 import OurExpertise from "@/components/Sections/OurExpertise";
 import Advantage from "@/components/Sections/Advantage";
+import ScrollCanvasSequence from "@/components/UI/ScrollCanvasSequence";
 // import VideoSection from "@/components/Sections/VideoSection";
 
 
@@ -23,7 +24,8 @@ export default function Home() {
      <Header/>
      <Hero/>
      <About/>
-     <ScrollVideoCanvas/>
+     {/* <ScrollVideoCanvas/> */}
+     <ScrollCanvasSequence/>
      <LiveParallaxBackground/>
      <Vision/>
      <Purpose/>

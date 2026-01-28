@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const DESKTOP_FRAMES = 311;
-const MOBILE_FRAMES = 311; 
+const MOBILE_FRAMES = 311;
 
 export default function ScrollCanvasSequence() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -47,7 +47,7 @@ export default function ScrollCanvasSequence() {
 
     resize();
     window.addEventListener("resize", resize);
-//    load 
+    //    load
     let loaded = 0;
 
     for (let i = 0; i < frameCount; i++) {
@@ -61,7 +61,7 @@ export default function ScrollCanvasSequence() {
       images.push(img);
     }
 
-//    render 
+    //    render
     function render() {
       const index = Math.round(frame.value);
       if (index === lastFrame) return;
@@ -75,7 +75,7 @@ export default function ScrollCanvasSequence() {
       const vw = window.innerWidth;
       const vh = window.innerHeight;
 
-    //  responsive 
+      //  responsive
       const scale = isMobile
         ? Math.min(vw / img.width, vh / img.height) * 0.95
         : Math.max(vw / img.width, vh / img.height);
@@ -89,18 +89,18 @@ export default function ScrollCanvasSequence() {
       ctx.drawImage(img, x, y, drawWidth, drawHeight);
     }
 
-//   scroll 
+    //   scroll
     gsap.to(frame, {
       value: frameCount - 1,
       ease: "none",
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top top",
-        end: isMobile ? "+=180%" : "+=260%",
-        scrub: isMobile ? 0.6 : 0.8,
+        end: isMobile ? '+=600%' : '+=900%',
+        scrub: isMobile ? 2 : 2.5,
         pin: true,
         anticipatePin: 1,
-        fastScrollEnd: true,
+        fastScrollEnd: false,
         invalidateOnRefresh: true,
       },
       onUpdate: render,

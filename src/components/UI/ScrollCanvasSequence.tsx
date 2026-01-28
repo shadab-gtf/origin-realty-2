@@ -6,9 +6,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const DESKTOP_FRAMES = 311;
-const MOBILE_FRAMES = 311;
-
+const DESKTOP_FRAMES = 488;
+const MOBILE_FRAMES = 488;
+const START_FRAME = 4;
 export default function ScrollCanvasSequence() {
   const sectionRef = useRef<HTMLElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);

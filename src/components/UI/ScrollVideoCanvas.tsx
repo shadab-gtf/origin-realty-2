@@ -29,14 +29,14 @@ export default function ScrollVideo() {
     ScrollTrigger.create({
       trigger: sectionRef.current,
       start: 'top top',
-      end: `+=${1390 * 12}px`, 
-      scrub: 1.2, 
+      end: `+=${1390 * 50}px`, 
+      scrub: 2, 
       pin: true,
       anticipatePin: 1,
       onUpdate: (self) => {
         const targetTime = self.progress * video.duration
 
-        if (Math.abs(video.currentTime - targetTime) > 0.04) {
+        if (Math.abs(video.currentTime - targetTime) > 0.01) {
           video.currentTime = targetTime
         }
 

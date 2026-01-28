@@ -23,9 +23,9 @@ export default function Home() {
     <>
      <Header/>
      <Hero/>
-     {/* <About/> */}
+     <About/>
      {/* <ScrollVideoCanvas/> */}
-     {/* <ScrollCanvasSequence/> */}
+     <ScrollCanvasSequence/>
      <LiveParallaxBackground/>
      <Vision/>
      <Purpose/>

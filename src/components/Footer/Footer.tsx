@@ -83,7 +83,7 @@ export default function Footer() {
             w-full
             bg-transparent
             border-b
-            border-white/30
+            border-white
             py-2
             mt-2
             outline-none
@@ -106,7 +106,7 @@ export default function Footer() {
           />
         </div>
 
-        <div className="w-full h-px bg-white/15 mb-20" />
+        <div className="w-full h-px bg-white mb-20" />
 
         <FooterHeader />
         <div className="relative">

@@ -141,7 +141,9 @@ export default function Beyond() {
                   "
                 // filter invert grayscale
                 // hover:invert-0 hover:grayscale-0
-                  >
+                  > 
+                  {/* divider  */}
+                  <div className="h-full w-px -mx-10 bg-[#231F20] rounded-3xl">  </div>
                 <Image src={logo} alt="" fill className="object-contain" />
               </motion.div>
             ))}

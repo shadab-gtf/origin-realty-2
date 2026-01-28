@@ -70,7 +70,7 @@ function SocialIcon({
         flex items-center justify-center
         w-10 h-10 sm:w-11 sm:h-11
         rounded-full
-        border border-white/20
+        border border-white
         text-white/70
         transition-all duration-500
         ease-[cubic-bezier(0.19,1,0.22,1)]

@@ -99,7 +99,7 @@ export default function OurExpertise() {
           Built on a foundation of decades of experience, we lead the way in
           creating impactful real estate solutions. Our expertise transforms
           spaces with a focus on quality, sustainability, and human-centric
-          design.
+          design.  
         </p>
       </div>
 

@@ -97,24 +97,23 @@ export default function Beyond() {
     >
       <div className="relative z-10  px-6 text-center">
         <span className="mb-4 inline-block text-sm tracking-normal font-bold text-[#7b6b51]">
-         Trusted by Iconic Brands
+          Trusted by Iconic Brands
         </span>
 
         <h2
           ref={titleRef}
           className="mx-auto max-w-4xl text-[clamp(2rem,4vw,2.1rem)] font-serif capitalize leading-tight text-[#231F20]"
         >
-         Partnering with India’s most respected names
+          Collaborating with India’s Most Trusted Brands
         </h2>
 
         <p
           ref={textRef}
           className="mx-auto mt-6 max-w-4xl text-[15px] leading-relaxed text-[#231F20] md:text-base"
         >
-          Our work with India’s most influential brands has shaped a disciplined
-          design intelligence—one that balances scale, precision, and emotional
-          resonance. Every environment we create is informed by operational
-          excellence and elevated by lifestyle thinking.
+          Our partnerships with India’s leading names empower us to bring
+          cutting-edge solutions to life. Through shared values and expertise,
+          we are committed to delivering excellence in every project.
         </p>
 
         {/* marquee   */}
@@ -141,9 +140,11 @@ export default function Beyond() {
                   "
                 // filter invert grayscale
                 // hover:invert-0 hover:grayscale-0
-                  > 
-                  {/* divider  */}
-                  <div className="h-full w-px -mx-10 bg-[#231F20] rounded-3xl">  </div>
+              >
+                {/* divider  */}
+                <div className="h-full w-px -mx-10 bg-[#231F20] rounded-3xl">
+                  {" "}
+                </div>
                 <Image src={logo} alt="" fill className="object-contain" />
               </motion.div>
             ))}

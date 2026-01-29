@@ -184,11 +184,9 @@ export default function Vision() {
             sm:mb-16
           "
         >
-          At Sector 88A, Origen unfolds the culmination of 30 years of business
-          acumen. We are shifting from structures to stories with a
-          human-centric vision where real estate is designed like a science and
-          lived as an upgrade. Here, we build beyond four walls to create
-          ecosystems that breathe with you.
+          At Sector 88A, we integrate 30 years of business acumen with
+          human-centric design. This vision creates spaces that are more than
+          just structures but evolving ecosystems for modern living.
         </p>
 
         <div
@@ -206,14 +204,18 @@ export default function Vision() {
             <p className="text-[#CEB58D] text-lg sm:text-2xl font-serif">
               8.265 Acres
             </p>
-            <p className="text-white/60 text-xs tracking-tight sm:text-sm mt-1">Land Parcel</p>
+            <p className="text-white/60 text-xs tracking-tight sm:text-sm mt-1">
+              Land Parcel
+            </p>
           </div>
 
           <div>
             <p className="text-[#CEB58D] text-lg sm:text-2xl font-serif">
               Sector 88A
             </p>
-            <p className="text-white/60 text-xs tracking-tight sm:text-sm mt-1">Gurugram</p>
+            <p className="text-white/60 text-xs tracking-tight sm:text-sm mt-1">
+              Gurugram
+            </p>
           </div>
 
           <div>

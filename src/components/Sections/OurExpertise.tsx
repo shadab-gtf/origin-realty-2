@@ -96,11 +96,10 @@ export default function OurExpertise() {
           Our Expertise
         </h2>
         <p className="mt-6 text-[#231F20] font-light sm:text-xl text-base">
-          Our foundation is built on decades of real delivery and a legacy of
-          business excellence. We lead with knowledge, creating human impact and
-          increasing life value per square foot. Through detail-driven
-          construction and a foundation of deep industry expertise, we bring a
-          distinctive craftsmanship to every project.
+          Built on a foundation of decades of experience, we lead the way in
+          creating impactful real estate solutions. Our expertise transforms
+          spaces with a focus on quality, sustainability, and human-centric
+          design.
         </p>
       </div>
 

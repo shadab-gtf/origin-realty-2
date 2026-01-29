@@ -57,7 +57,7 @@ export default function Hero() {
   return (
     <section ref={heroRef} className="relative h-svh w-full overflow-hidden">
       {/* video background  */}
-       <video
+      <video
         ref={videoRef}
         aria-hidden="true"
         className="
@@ -175,8 +175,9 @@ export default function Hero() {
           will-change-transform
         "
             >
-              Redefine Real Estate with our expertise to build spaces that
-              transform lives.
+              Where every space is carefully crafted to foster connections and
+              enhance your living experience, creating a sense of home and
+              belonging.
             </motion.p>
           </div>
 

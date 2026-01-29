@@ -152,34 +152,46 @@ export default function Header() {
             onClick={() => setIsActive(!isActive)}
             className="
               flex items-center gap-2 cursor-pointer select-none
-              border border-white hover:border-[#231F20]
-              px-5 py-2 rounded-3xl
-              bg-transparent hover:bg-[#231F20]
+              px-5 py-2 
+              bg-transparent 
               transition-colors duration-300 ease-out
             "
           >
             {/* Burger */}
-            <div
-              className={`
-                relative w-9
-                before:content-[''] before:block before:h-px before:w-full before:bg-white
-                before:relative before:top-1
-                after:content-[''] after:block after:h-px after:w-full after:bg-white
-                after:relative after:-top-1
-                before:transition-all after:transition-all
-                before:duration-700 after:duration-700
-                before:ease-[cubic-bezier(0.76,0,0.24,1)]
-                after:ease-[cubic-bezier(0.76,0,0.24,1)]
-                ${
-                  isActive
-                    ? "before:-rotate-45 before:top-px after:rotate-45 after:-top-px"
-                    : ""
-                }
-              `}
-            />
+            <div className="relative w-9 h-4 cursor-pointer">
+              {/* TOP */}
+              <span
+                className={`
+      absolute left-0 top-0 h-px w-full bg-white
+      transition-all duration-700
+      ease-[cubic-bezier(0.76,0,0.24,1)]
+      ${isActive ? "top-1/2 rotate-45" : ""}
+    `}
+              />
+
+              {/* MIDDLE */}
+              <span
+                className={`
+      absolute left-0 top-1/2 h-px w-full bg-white
+      transition-all duration-700
+      ease-[cubic-bezier(0.76,0,0.24,1)]
+      ${isActive ? "opacity-0" : ""}
+    `}
+              />
+
+              {/* BOTTOM */}
+              <span
+                className={`
+      absolute left-0 bottom-0 h-px w-full bg-white
+      transition-all duration-700
+      ease-[cubic-bezier(0.76,0,0.24,1)]
+      ${isActive ? "top-1/2 -rotate-45 bottom-auto" : ""}
+    `}
+              />
+            </div>
 
             {/* Text */}
-            <div className="relative text-white">
+            {/* <div className="relative text-white">
               <motion.span
                 initial={false}
                 variants={opacity}
@@ -196,7 +208,7 @@ export default function Header() {
               >
                 Close
               </motion.span>
-            </div>
+            </div> */}
           </div>
         </div>
 

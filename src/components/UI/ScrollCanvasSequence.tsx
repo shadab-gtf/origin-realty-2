@@ -6,9 +6,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const DESKTOP_FRAMES = 488;
-const MOBILE_FRAMES = 488;
-const START_FRAME = 10;
+const DESKTOP_FRAMES = 486;
+const MOBILE_FRAMES = 486;
+const START_FRAME = 6;
 export default function ScrollCanvasSequence() {
   const sectionRef = useRef<HTMLElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -52,7 +52,7 @@ export default function ScrollCanvasSequence() {
 
     for (let i = 0; i < frameCount; i++) {
       const img = new Image();
-      img.src = `/Origin/Origin_${String(i).padStart(5, "0")}.jpg`;
+      img.src = `/Origin/origin_${String(i).padStart(5, "0")}.jpg`;
       img.decode().catch(() => {});
       img.onload = () => {
         loaded++;

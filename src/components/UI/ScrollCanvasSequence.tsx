@@ -52,7 +52,7 @@ export default function ScrollCanvasSequence() {
 
     for (let i = 0; i < frameCount; i++) {
       const img = new Image();
-      img.src = `/Origin/origin_${String(i).padStart(5, "0")}.jpg`;
+      img.src = `/Origin/Origin_${String(i).padStart(5, "0")}.jpg`;
       img.decode().catch(() => {});
       img.onload = () => {
         loaded++;
